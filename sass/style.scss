@@ -202,7 +202,6 @@ span {
 
 @include media-lg {
   main {
-    background-color: lightblue;
     @include gridProperty(
       1fr 1fr 1fr 1fr, 
       Repeat(2, auto), 
