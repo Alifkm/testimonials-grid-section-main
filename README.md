@@ -27,7 +27,7 @@ Users should be able to:
 - Desktop:
 ![](./images/Frontend%20Mentor%20Challenge%20Desktop%20ss.png)
 
--Mobile:
+- Mobile:
 ![](./images/Frontend%20Mentor%20Challenge%20Mobile%20ss.png)
 
 ### Links
