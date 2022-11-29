@@ -1,0 +1,248 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: $font-size;
+  background-color: $light-grayish-blue;
+}
+
+// ---------------------------
+// Elements
+// ---------------------------
+
+main {
+  padding: 5em 0;
+  margin-inline: auto;
+}
+
+section {
+  border-radius: 10px;
+  padding: 2em 2.5em;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+section + section {
+  margin-top: 2em;
+}
+
+header {
+  @include flexProperty(space-between, center, row);
+  gap: 1.5em;
+  margin-bottom: 1.75em;
+}
+
+footer {
+  margin-bottom: 1em;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: $white;
+}
+
+span {
+  opacity: 0.5;
+}
+
+span {
+  color: $light-gray;
+}
+
+
+// ---------------------------
+// Objects
+// ---------------------------
+
+.container {
+  width: Min(90%, 1200px);
+}
+
+.profile-image {
+  width: 37px;
+  border-radius: 50%; 
+}
+
+.profile-info {
+  flex: 1;
+  color: $white;
+}
+
+.paragraph {
+  color: $light-gray;
+  opacity: 0.7;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  font-size: .85rem;
+}
+
+
+// ---------------------------
+// First Section
+// ---------------------------
+
+.first-section {
+  background: $moderate-violet url('../images/bg-pattern-quotation.svg') no-repeat 90% 0%;
+  background-color: $moderate-violet;
+
+  #{&}__image {
+    border: 3px solid lighten($moderate-violet, 10%);
+  }
+
+}
+
+
+// ---------------------------
+// Second Section
+// ---------------------------
+
+.second-section {
+  background-color: $very-dark-grayish-blue;
+
+  #{&}__image {
+    border: 3px solid $white;
+  }
+
+}
+
+
+// ---------------------------
+// Third Section
+// ---------------------------
+
+.third-section {
+  background-color: $white;
+
+  #{&}__image {
+    border: 3px solid $white;
+  }
+
+  #{&}__profile {
+    color: $very-dark-grayish-blue;
+
+    span {
+      color: $very-dark-grayish-blue;
+    }
+  }
+
+  #{&}__title, #{&}__paragraph {
+    color: $very-dark-grayish-blue;
+   }
+}
+
+
+// ---------------------------
+// Fourth Section
+// ---------------------------
+
+.fourth-section {
+  background-color: $very-dark-blackish-blue;
+
+  #{&}__image {
+    border: 3px solid $moderate-violet;
+  }
+
+}
+
+
+// ---------------------------
+// Fifth Section
+// ---------------------------
+
+.fifth-section {
+  background-color: $white;
+
+  #{&}__image {
+    border: 3px solid $white;
+  }
+
+  #{&}__profile {
+    color: $very-dark-grayish-blue;
+
+    span {
+      color: $very-dark-grayish-blue;
+    }
+  }
+
+  #{&}__title, #{&}__paragraph {
+    color: $very-dark-grayish-blue;
+   }
+  
+}
+
+
+// ---------------------------
+// Footer
+// ---------------------------
+
+.footer { 
+  font-size: 11px; 
+  text-align: center; 
+  
+  #{&}__link { 
+    color: hsl(228, 45%, 44%); 
+  }
+}
+
+
+// ---------------------------
+// Media queries
+// ---------------------------
+
+@include media-lg {
+  main {
+    background-color: lightblue;
+    @include gridProperty(
+      1fr 1fr 1fr 1fr, 
+      Repeat(2, auto), 
+      2em
+    );
+    grid-template-areas: 
+    "section1 section1 section2 section5"
+    "section3 section4 section4 section5"
+    ;
+    padding-top: 12em;
+    padding-bottom: 10em;
+  }
+
+  section + section {
+    margin-top: 0;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+  }
+  
+  .first-section {
+    grid-area: section1;
+    background-position: 80% 0%;
+  }
+
+  .second-section {
+    grid-area: section2;
+  }
+
+  .third-section {
+    grid-area: section3;
+  }
+
+  .fourth-section {
+    grid-area: section4;
+  }
+
+  .fifth-section {
+    grid-area: section5;
+  }
+
+}
