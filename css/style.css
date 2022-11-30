@@ -8,7 +8,7 @@
 
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
   background-color: #ecf2f8;
 }
 
@@ -32,9 +32,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -77,10 +77,8 @@ span {
 }
 
 .profile-info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   color: white;
+  max-width: 6rem;
 }
 
 .paragraph {
@@ -166,6 +164,9 @@ span {
 }
 
 @media screen and (min-width: 992px) {
+  header {
+    margin-bottom: 1.25em;
+  }
   main {
     display: -ms-grid;
     display: grid;
@@ -177,6 +178,9 @@ span {
         grid-template-areas: "section1 section1 section2 section5" "section3 section4 section4 section5";
     padding-top: 12em;
     padding-bottom: 10em;
+  }
+  h1 {
+    font-size: 1.385rem;
   }
   section + section {
     margin-top: 0;

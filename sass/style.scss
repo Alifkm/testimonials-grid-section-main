@@ -34,7 +34,7 @@ section + section {
 }
 
 header {
-  @include flexProperty(space-between, center, row);
+  @include flexProperty(flex-start, center, row);
   gap: 1.5em;
   margin-bottom: 1.75em;
 }
@@ -75,8 +75,8 @@ span {
 }
 
 .profile-info {
-  flex: 1;
   color: $white;
+  max-width: 6rem;
 }
 
 .paragraph {
@@ -201,6 +201,10 @@ span {
 // ---------------------------
 
 @include media-lg {
+  header {
+    margin-bottom: 1.25em;
+  }
+
   main {
     @include gridProperty(
       1fr 1fr 1fr 1fr, 
@@ -213,6 +217,10 @@ span {
     ;
     padding-top: 12em;
     padding-bottom: 10em;
+  }
+
+  h1 {
+    font-size: 1.385rem;
   }
 
   section + section {
